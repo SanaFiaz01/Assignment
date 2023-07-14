@@ -2,10 +2,6 @@
 
 namespace App\Controllers;
 
-class Auth extends BaseController
+class Auth extends \IonAuth\Controllers\Auth
 {
-    public function index()
-    {
-        echo "Ion Auth";
-    }
 }

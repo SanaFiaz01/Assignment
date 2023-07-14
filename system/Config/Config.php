@@ -16,6 +16,7 @@ namespace CodeIgniter\Config;
  */
 class Config
 {
+
     /**
      * Create new configuration instances or return
      * a shared instance
