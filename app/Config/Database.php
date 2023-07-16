@@ -2,7 +2,7 @@
 
 namespace Config;
 
-use CodeIgniter\Database\Config;
+use CodeIgniter\Database\Config; 
 
 /**
  * Database Configuration
