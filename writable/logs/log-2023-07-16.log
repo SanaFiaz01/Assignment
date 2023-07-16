@@ -1,0 +1,149 @@
+CRITICAL - 2023-07-16 11:04:01 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\CI\\Authorization\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Auth', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\CI\\Authorization\\public\\index.php')
+CRITICAL - 2023-07-16 11:12:04 --> Call to undefined function form_open()
+in APPPATH\ThirdParty\IonAuth\Views\auth\login.php on line 6.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('IonAuth\\Views\\auth\\login', [], true)
+ 4 APPPATH\Controllers\Auth.php(23): view('IonAuth\\Views\\auth\\login')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\CI\\Authorization\\public\\index.php')
+CRITICAL - 2023-07-16 11:13:11 --> Invalid file: "ThirdParty\IonAuth\Views\auth\login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ThirdParty\\IonAuth\\Views\\auth\\login.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('ThirdParty\\IonAuth\\Views\\auth\\login', [], true)
+ 3 APPPATH\Controllers\Auth.php(23): view('ThirdParty\\IonAuth\\Views\\auth\\login')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\CI\\Authorization\\public\\index.php')
+CRITICAL - 2023-07-16 11:16:34 --> Call to undefined function form_open()
+in APPPATH\ThirdParty\IonAuth\Views\auth\login.php on line 6.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('IonAuth\\Views\\auth\\login', [], true)
+ 4 APPPATH\Controllers\Auth.php(23): view('IonAuth\\Views\\auth\\login')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\CI\\Authorization\\public\\index.php')
+ERROR - 2023-07-16 11:56:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\CI\Authorization\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\CI\Authorization\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ci_authenticati...', 3306, '', 0)
+#1 D:\CI\Authorization\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\CI\Authorization\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\CI\Authorization\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 D:\CI\Authorization\system\Database\Seeder.php(97): CodeIgniter\Database\Config::forge(NULL)
+#5 D:\CI\Authorization\system\Commands\Database\Seed.php(69): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#6 D:\CI\Authorization\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#7 D:\CI\Authorization\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#8 D:\CI\Authorization\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\CI\Authorization\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\CI\Authorization\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\CI\Authorization\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\CI\Authorization\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 D:\CI\Authorization\system\Database\Seeder.php(97): CodeIgniter\Database\Config::forge(NULL)
+#4 D:\CI\Authorization\system\Commands\Database\Seed.php(69): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#5 D:\CI\Authorization\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#6 D:\CI\Authorization\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#7 D:\CI\Authorization\spark(97): CodeIgniter\CLI\Console->run()
+#8 {main}
+CRITICAL - 2023-07-16 11:56:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\Database\Seeder.php(97): CodeIgniter\Database\Config::forge(null)
+ 4 SYSTEMPATH\Commands\Database\Seed.php(69): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+ 5 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run([...])
+ 6 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 7 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+ERROR - 2023-07-16 11:58:24 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\CI\Authorization\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\CI\Authorization\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ci_authenticati...', 3306, '', 0)
+#1 D:\CI\Authorization\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\CI\Authorization\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\CI\Authorization\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 D:\CI\Authorization\system\Database\Seeder.php(97): CodeIgniter\Database\Config::forge(NULL)
+#5 D:\CI\Authorization\system\Commands\Database\Seed.php(69): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#6 D:\CI\Authorization\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#7 D:\CI\Authorization\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#8 D:\CI\Authorization\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\CI\Authorization\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\CI\Authorization\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\CI\Authorization\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\CI\Authorization\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 D:\CI\Authorization\system\Database\Seeder.php(97): CodeIgniter\Database\Config::forge(NULL)
+#4 D:\CI\Authorization\system\Commands\Database\Seed.php(69): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#5 D:\CI\Authorization\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#6 D:\CI\Authorization\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#7 D:\CI\Authorization\spark(97): CodeIgniter\CLI\Console->run()
+#8 {main}
+CRITICAL - 2023-07-16 11:58:24 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\Database\Seeder.php(97): CodeIgniter\Database\Config::forge(null)
+ 4 SYSTEMPATH\Commands\Database\Seed.php(69): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+ 5 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run([...])
+ 6 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 7 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-07-16 12:11:04 --> Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Auth.php(40): view('login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 12:15:53 --> Call to a member function setRule() on null
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 12:17:47 --> Call to a member function getFlashdata() on null
+in APPPATH\Controllers\Auth.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 12:24:06 --> Class 'IonAuth\Controllers\Auth' not found
+in APPPATH\Controllers\Auth.php on line 8.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\CI\\Authorization\\app\\Controllers\\Auth.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 6 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Auth', true)
+ 7 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
